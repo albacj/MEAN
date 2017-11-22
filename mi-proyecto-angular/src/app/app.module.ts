@@ -22,10 +22,12 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     RouterModule.forRoot([
       {
+        path: "",
+        component: HomeComponent
+      },{
         path: "posts",
         component: PostsComponent
-      },
-      {
+      },{
         path: "authors",
         component: AuthorsComponent
       }
