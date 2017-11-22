@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { PostsComponent } from './posts/posts.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     MyButtonComponent,
     PostsComponent,
     AuthorsComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
