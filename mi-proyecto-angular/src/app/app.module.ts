@@ -7,6 +7,7 @@ import { MyButtonComponent } from './my-button/my-button.component';
 import { RouterModule } from '@angular/router';
 import { PostsComponent } from './posts/posts.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AuthorsComponent } from './authors/authors.component';
     AppComponent,
     MyButtonComponent,
     PostsComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
