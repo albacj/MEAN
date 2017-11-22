@@ -18,7 +18,16 @@ import { AuthorsComponent } from './authors/authors.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([
+      {
+        path: "posts",
+        component: PostsComponent
+      },
+      {
+        path: "authors",
+        component: AuthorsComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
