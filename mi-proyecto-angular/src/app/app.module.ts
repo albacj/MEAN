@@ -9,6 +9,7 @@ import { PostsComponent } from './posts/posts.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PostComponent } from './post/post.component';
 
 
 @NgModule({
@@ -18,17 +19,22 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PostsComponent,
     AuthorsComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
         path: "",
-        component: HomeComponent
+        component: HomeComponent,
       },{
         path: "posts",
-        component: PostsComponent
+        component: PostsComponent,
+        children: [{
+          path: ":id",
+          component: PostComponent
+        }]
       },{
         path: "authors",
         component: AuthorsComponent
