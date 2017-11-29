@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MyButtonComponent } from './my-button/my-button.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule} from '@angular/router';
 import { PostsComponent } from './posts/posts.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { HomeComponent } from './home/home.component';
@@ -47,4 +47,5 @@ import { PostComponent } from './post/post.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
