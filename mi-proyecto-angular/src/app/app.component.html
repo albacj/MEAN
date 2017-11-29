@@ -17,9 +17,12 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>-->
-<nav>
+<nav class="container-fluid">
   <a routerLink="">Home</a>
   <a routerLink="/posts">Posts</a>
   <a routerLink="/authors">Authors</a>
 </nav>
-<router-outlet></router-outlet>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
