@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-post',
@@ -8,10 +9,14 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class PostComponent implements OnInit {
   postId = null;
-  constructor(private route:ActivatedRoute) {
+  constructor(private route:ActivatedRoute, private router:Router) {
     route.params.subscribe(
       params =>{
         this.postId = parseInt(params['id']);
+
+        if (isNaN(this.postId)) {
+          this.router.navigateByUrl("/404", { skipLocationChange: true })
+        }
       }
     );
   }
