@@ -2,9 +2,33 @@
   posts works!
 </p>-->
 
+<ng-template #modal let-c="close">
+  <div class="modal-header">
+    <h4 class="modal-title">Nueva Entrada</h4>
+    <button type="button" class="close" aria-label="Close" (click)="c()"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Título</label>
+        <input type="text" class="form-control" id="formGroupExampleInput"
+        placeholder="Contenido">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary"
+    (click)="c()">Cancelar</button>
+    <button type="button" class="btn btn-primary">Enviar</button>
+  </div>
+</ng-template>
+
 <div class="">
+  <button (click)="open(modal)" class="btn btn-block btn-primary">Crear nueva entrada</button>
   <router-outlet></router-outlet>
 </div>
+
+<br>
 
 <div class="row">
   <div class="col-3 col-sm-12">
@@ -17,9 +41,6 @@
     <p>Blog de entrada 3</p>
   </div>
 </div>
-
-
-
 <div class="">
   <router-outlet></router-outlet>
 </div>
