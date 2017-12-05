@@ -7,7 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+
 export class PostComponent implements OnInit {
+
+  postDate = new Date();
+
   postId = null;
   constructor(private route:ActivatedRoute, private router:Router) {
     route.params.subscribe(

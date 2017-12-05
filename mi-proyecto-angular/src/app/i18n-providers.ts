@@ -17,3 +17,8 @@ declare var System: any;
 function getTranslationsWithES6Import(locale: string) {
   return System.import('../locale/messages.' + locale + '.xlf');
 }
+
+const locale = document['locale'] as string;
+  export function getLocaleProvider(): String {
+  return locale;
+}
