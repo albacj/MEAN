@@ -18,9 +18,18 @@
   </li>
 </ul>-->
 <nav class="container-fluid">
-  <a routerLink="">Home</a>
-  <a routerLink="/posts">Posts</a>
-  <a routerLink="/authors">Authors</a>
+  <a class="navbar-brand" href="#">Blog para aprender la pila MEAN</a>
+  <ul class="navbar-nav">
+    <li>
+      <a class="nav-link" routerLink="" routerLinkActive="active" i18n>Home</a>
+    </li>
+    <li>
+      <a class="nav-link" routerLink="/posts" routerLinkActive="active" i18n ="A collection">Posts</a>
+    </li>
+    <li>
+      <a class="nav-link" routerLink="/authors" routerLinkActive="active" i18n="People">Authors</a>
+    </li>
+  </ul>
 </nav>
 
 <div class="container">
