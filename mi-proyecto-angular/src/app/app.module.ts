@@ -11,6 +11,8 @@ import { AuthorsComponent } from './authors/authors.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostComponent } from './post/post.component';
+import { CreatePostFormComponent } from '././posts/create-post-form/create-post-form.component';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { PostComponent } from './post/post.component';
     AuthorsComponent,
     HomeComponent,
     PageNotFoundComponent,
-    PostComponent
+    PostComponent,
+    CreatePostFormComponent
   ],
   imports: [
     BrowserModule,
