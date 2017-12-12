@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {BlogPost} from "../blog-post";
+import {CurrentUserService} from "../../current-user.service";
+import {User} from "../../user";
 
 @Component({
   selector: 'app-create-post-form',
@@ -9,8 +11,6 @@ import {BlogPost} from "../blog-post";
 })
 export class CreatePostFormComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
-
   //open(content) {
   //  this.model = new BlogPost('Nuevo título para la entrada');
   //  this.modalService.open(content, {backdrop: 'static', size: 'lg'});
@@ -18,5 +18,13 @@ export class CreatePostFormComponent implements OnInit {
   //submit() {
   //  console.log(JSON.stringify(this.model));
   //}
+  model: BlogPost;
+  user: User;
+
+  constructor(private modalService: NgbModal, private currentUserService:CurrentUserService) {}
+
+  ngOnInit() {
+    this.user = this.currentUserService.getUser();
+  }
 
 }

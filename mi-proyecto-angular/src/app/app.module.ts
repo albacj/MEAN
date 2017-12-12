@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PostComponent } from './post/post.component';
 import { CreatePostFormComponent } from '././posts/create-post-form/create-post-form.component';
+import { CurrentUserService } from "./current-user.service";
+import { User } from "./user";
 
 
 
@@ -49,8 +51,13 @@ import { CreatePostFormComponent } from '././posts/create-post-form/create-post-
       }
     ])
   ],
-  providers: [],
+  providers: [CurrentUserService],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(private currentUserService: CurrentUserService) {
+    let user = new User('Alba','Carmona','acarmona@example.com');
+    currentUserService.setUser(user);
+  }
+}
