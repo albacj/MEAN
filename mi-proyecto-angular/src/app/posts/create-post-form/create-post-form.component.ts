@@ -11,12 +11,12 @@ export class CreatePostFormComponent implements OnInit {
 
   constructor(private modalService: NgbModal) { }
 
-  open(content) {
-    this.model = new BlogPost('Nuevo título para la entrada');
-    this.modalService.open(content, {backdrop: 'static', size: 'lg'});
-  }
-  submit() {
-    console.log(JSON.stringify(this.model));
-  }
+  //open(content) {
+  //  this.model = new BlogPost('Nuevo título para la entrada');
+  //  this.modalService.open(content, {backdrop: 'static', size: 'lg'});
+  //}
+  //submit() {
+  //  console.log(JSON.stringify(this.model));
+  //}
 
 }

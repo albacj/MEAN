@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostsComponent } from './posts.component';
 import { PostComponent } from '../post/post.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { CreatePostFormComponent } from './create-post-form/create-post-form.component';
+//import { CreatePostFormComponent } from './create-post-form/create-post-form.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
